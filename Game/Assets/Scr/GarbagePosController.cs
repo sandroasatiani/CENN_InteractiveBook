@@ -7,59 +7,53 @@ public class GarbagePosController : MonoBehaviour {
 
     public GameObject LevelGO;
 
-    public List<GameObject> GarbageList;
-    public  List<GameObject> PositionsList;
+    public GameObject AllGarbage;
+    public List<Vector3> PositionsList;
     List<int> randomIntList;
-    int randomNum;
 
 
     void Awake ()
     {
-        for (int i = 0; i < LevelGO.transform.childCount; i++)
-        {
-            PositionsList.Add(LevelGO.transform.GetChild(i).gameObject);
-        }
+       for (int i = 0; i < LevelGO.transform.childCount; i++)
+       {
+           print(LevelGO.transform.GetChild(i).gameObject.transform.position);
+           PositionsList.Add(LevelGO.transform.GetChild(i).gameObject.transform.position);
+       }
     }
 
 
 	void Start () {
 
-        List<int> randomNumList = Enumerable.Range(0, GarbageList.Count).ToList();
-        randomNumList.Shuffle();
-        for (int i = 0; i < randomNumList.Count; i++)
+        List<int> randomNumList = Enumerable.Range(0, AllGarbage.transform.childCount).ToList();
+        randomNumList.Shuffle();    
+        for (int i = 0; i < LevelGO.transform.childCount; i++)
         {
             print(randomNumList[i]);
             
         }
 
-        for (int i = 0; i < GarbageList.Count; i++)
+        for (int i = 0; i < LevelGO.transform.childCount; i++)
         {
-            Instantiate(GarbageList[i], PositionsList[randomNumList[i]].transform.position, Quaternion.identity);
+            Instantiate(AllGarbage.transform.GetChild(randomNumList[i]), PositionsList[i], Quaternion.identity);
         }
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-   
 
 }
 
-static class MyExtensions
-{
-    public static void Shuffle<T>(this IList<T> list)
-    {
-        System.Random rng = new System.Random();
-        int n = list.Count;
-        while (n > 1)
-        {
-            n--;
-            int k = rng.Next(n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
-        }
-    }
-}
+//static class MyExtensions
+//{
+//    public static void Shuffle<T>(this IList<T> list)
+//    {
+//        System.Random rng = new System.Random();
+//        int n = list.Count;
+//        while (n > 1)
+//        {
+//            n--;
+//            int k = rng.Next(n + 1);
+//            T value = list[k];
+//            list[k] = list[n];
+//            list[n] = value;
+//        }
+//    }
+//}

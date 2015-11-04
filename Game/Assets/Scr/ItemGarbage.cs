@@ -10,6 +10,8 @@ public class ItemGarbage : MonoBehaviour {
     Vector3 startingPos;
     Animator animator;
     GameObject currentBin;
+    GameObject binGO;
+
 
     void Start()
     {
@@ -39,33 +41,50 @@ public class ItemGarbage : MonoBehaviour {
         else
         {
             StartCoroutine(MoveToStartPos());
+            if (currentBin !=null)
+            {
+                currentBin.GetComponent<Animator>().SetTrigger("Shake");
+
+            }
             //transform.position = startingPos; 
         }
         
     }
-
+   
     void OnTriggerEnter2D(Collider2D other)
     {
         print(other.gameObject.tag);
+        currentBin = other.gameObject;
         switch (gameObject.tag)
         {
             case "Plastic_Garbage":
                 if (other.gameObject.tag == "Plastic_Bin")
+                {
                     canBeDropped = true;
+                    binGO = other.gameObject;
+                }
                 break;
             case "Paper_Garbage":
                 if (other.gameObject.tag == "Paper_Bin")
+                {
                     canBeDropped = true;
+                    binGO = other.gameObject;
+                }
                 break;
             case "Metalic_Garbage":
                 if (other.gameObject.tag == "Metalic_Bin")
+                {
                     canBeDropped = true;
+                    binGO = other.gameObject;
+                }
                 break;
             case "Organic_Garbage":
                 if (other.gameObject.tag == "Organic_Bin")
+                {
                     canBeDropped = true;
+                    binGO = other.gameObject;
+                }
                 break;
-
 
             default:
                 break;
@@ -74,11 +93,14 @@ public class ItemGarbage : MonoBehaviour {
     void OnTriggerExit2D(Collider2D other)
     {
         canBeDropped = false;
+        currentBin = null;
     }
 
     private void DropInBin(string type)
     {
+        binGO.GetComponent<Animator>().SetTrigger("Swallow");
         animator.SetTrigger("DropIn");
+        
     }
 
     IEnumerator MoveToStartPos()
@@ -88,7 +110,6 @@ public class ItemGarbage : MonoBehaviour {
        {
             yield return null;
             transform.position = Vector3.Lerp(transform.position, startingPos, (Time.time - startTime));
-            print("still returning");
        }
         transform.position = startingPos;
 
