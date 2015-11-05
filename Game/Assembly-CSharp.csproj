@@ -49,10 +49,18 @@
      <Compile Include="Assets\Scr\GarbagePosController.cs" />
      <Compile Include="Assets\Scr\ItemBin.cs" />
      <Compile Include="Assets\Scr\ItemGarbage.cs" />
-     <Compile Include="Assets\Scr\Level.cs" />
      <Compile Include="Assets\Scr\LevelController.cs" />
      <Compile Include="Assets\Scr\Start_Controller.cs" />
      <Compile Include="Assets\Scr\UI_Controller.cs" />
+     <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
+     <Compile Include="Assets\xARM\Components\xARMDelegatesExample.cs" />
+     <Compile Include="Assets\xARM\Components\xARMProxy.cs" />
+     <Compile Include="Assets\xARM\Managers\xARMConfig.cs" />
+     <Compile Include="Assets\xARM\Managers\xARMManager.cs" />
+     <Compile Include="Assets\xARM\Windows\xARMGalleryWindow.cs" />
+     <Compile Include="Assets\xARM\Windows\xARMOptionsWindow.cs" />
+     <Compile Include="Assets\xARM\Windows\xARMPreviewWindow.cs" />
+     <None Include="Assets\xARM\_Changelog.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

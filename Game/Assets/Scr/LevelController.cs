@@ -12,7 +12,7 @@ public class LevelController : MonoBehaviour {
     [HideInInspector]public List<Vector3> PositionsList;
 
 	void Start () {
-        LoadLevel(1);
+        //LoadLevel(1);
 	}
 	
 	void Update () {
