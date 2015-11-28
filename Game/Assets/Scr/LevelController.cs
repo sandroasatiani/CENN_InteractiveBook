@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour {
     public GameObject LevelControllerPanel;
+    public GameObject BackgroundImage;
     public GameObject Bins;
     public GameObject AllGarbage;
     public List<GameObject> Levels;
@@ -24,7 +26,8 @@ public class LevelController : MonoBehaviour {
         if (LevelControllerPanel.activeInHierarchy)
             LevelControllerPanel.SetActive(false);
 
-
+        BackgroundImage.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("Level_Background/Stage_" + levelNum.ToString());
+        print("Level_Background/Stage_" + levelNum.ToString());
         GameObject currentLevel =  Instantiate(Levels[levelNum - 1], Vector3.zero, Quaternion.identity) as GameObject;
         GameObject LevelGO = currentLevel.transform.Find("Garbage_Positions").gameObject;
         Camera.main.backgroundColor = currentLevel.transform.Find("StageBGColor").gameObject.GetComponent<SpriteRenderer>().color;
