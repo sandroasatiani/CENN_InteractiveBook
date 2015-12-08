@@ -16,4 +16,9 @@ public class GlobalParams : MonoBehaviour {
         return PlayerPrefs.GetInt("Passed_Levels");
     }
 
+    public void SaveScore (int score)
+    {
+        
+    }
+
 }

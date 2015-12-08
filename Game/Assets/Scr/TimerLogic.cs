@@ -31,6 +31,7 @@ public class TimerLogic : MonoBehaviour {
         {
             print("Finished Level Load REcycle");
             print("Score: " + Timer);
+            Application.LoadLevel("Recycle");
         }
 	
 	}
