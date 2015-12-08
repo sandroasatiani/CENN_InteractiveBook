@@ -18,7 +18,6 @@ public class GarbageAmountText : MonoBehaviour {
 
     public static void UpdateText()
     {
-
         thisText.text = CurrentLevelController.GarbageDropped.ToString() + "/" + amount.ToString();
     }
 	

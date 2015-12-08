@@ -54,7 +54,6 @@ public class ItemGarbage : MonoBehaviour {
    
     void OnTriggerEnter2D(Collider2D other)
     {
-        print(other.gameObject.tag);
         currentBin = other.gameObject;
         switch (gameObject.tag)
         {
