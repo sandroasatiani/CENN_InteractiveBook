@@ -21,12 +21,13 @@ public class ItemGarbage : MonoBehaviour {
     void OnMouseDown()
     {
         startingPos = gameObject.transform.position;
-        print(startingPos);
+       
     }
 
     void OnMouseDrag()
     {
-        
+
+        if (GlobalParams.IsPaused) return;
         point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(point.x, point.y, transform.position.z);
     }
@@ -100,6 +101,8 @@ public class ItemGarbage : MonoBehaviour {
     {
         binGO.GetComponent<Animator>().SetTrigger("Swallow");
         animator.SetTrigger("DropIn");
+        CurrentLevelController.GarbageDropped++;
+        GarbageAmountText.UpdateText();
         
     }
 
