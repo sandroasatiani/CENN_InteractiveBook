@@ -58,12 +58,12 @@
      <Compile Include="Assets\Scr\Start_Controller.cs" />
      <Compile Include="Assets\Scr\TimerLogic.cs" />
      <Compile Include="Assets\Scr\UI_Controller.cs" />
+     <Compile Include="Assets\Scr\hide.cs" />
      <Compile Include="Assets\Scr\recycle\MechanismAnim.cs" />
      <Compile Include="Assets\Scr\recycle\Params.cs" />
      <Compile Include="Assets\Scr\recycle\boxGenerator.cs" />
      <Compile Include="Assets\Scr\recycle\itemBox.cs" />
-     <Compile Include="Assets\hide.cs" />
-     <Compile Include="Assets\textiskodi.cs" />
+     <Compile Include="Assets\Scr\textiskodi.cs" />
      <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
      <Compile Include="Assets\xARM\Components\xARMDelegatesExample.cs" />
      <Compile Include="Assets\xARM\Components\xARMProxy.cs" />

@@ -5,6 +5,7 @@ public class TimerLogic : MonoBehaviour {
 
     public float Timer = 180;
     float angle;
+    bool levelIsFinished = false;
     public GameObject TimerArrow;
 	void Start () {
         angle = Timer;
@@ -13,6 +14,7 @@ public class TimerLogic : MonoBehaviour {
 	void Update () {
 
         if (GlobalParams.IsPaused) return;
+        if (levelIsFinished) return;
         if (CurrentLevelController.GarbageDropped<CurrentLevelController.GarbageAmount)
         {
             
@@ -31,7 +33,9 @@ public class TimerLogic : MonoBehaviour {
         {
             print("Finished Level Load REcycle");
             print("Score: " + Timer);
-            Application.LoadLevel("Recycle");
+            SettingsBtnsController.ShowScorePanel();
+            levelIsFinished = true;
+
         }
 	
 	}
