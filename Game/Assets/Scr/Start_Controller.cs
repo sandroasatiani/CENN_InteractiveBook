@@ -6,7 +6,7 @@ public class Start_Controller : MonoBehaviour {
 
     public void StartGame()
     {
-        Application.LoadLevel("Game");
+        Application.LoadLevel("LevelSelector");
         print("Game Started");
     }
 
