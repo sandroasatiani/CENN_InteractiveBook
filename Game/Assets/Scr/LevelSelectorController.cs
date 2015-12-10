@@ -17,4 +17,8 @@ public class LevelSelectorController : MonoBehaviour {
             Levels.transform.GetChild(i).gameObject.transform.FindChild("Cover").gameObject.SetActive(false);
         }
     }
+    public void GoToHome()
+    {
+        Application.LoadLevel("StartScene");
+    }
 }

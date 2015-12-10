@@ -41,6 +41,9 @@ public class MechanismAnim : MonoBehaviour {
 	List<string> productName;
 	 static List<string> productTagName;
 	float productY;
+    public int Score = 180;
+
+    public GameObject ScorePanel;
 
 	void Start ()
 	{
@@ -117,7 +120,11 @@ public class MechanismAnim : MonoBehaviour {
 		yield return new WaitForSeconds(0.8f);
 		if(ProductList.Count >=3 )
 		{
-			Application.LoadLevel(Application.loadedLevel);
+            //Application.LoadLevel(Application.loadedLevel);
+            // Load Next Level, Show Score
+            ScorePanel.SetActive(true);
+            //if (CurrentLevelController.LevelN <5)
+            //    Application.LoadLevel("Level_Scene_" + (CurrentLevelController.LevelN+1).ToString());
 		}
 		else
 		{

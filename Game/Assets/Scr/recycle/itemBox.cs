@@ -30,9 +30,15 @@ public class itemBox : MonoBehaviour {
 				Params.isChoosen = true;
 				MechanismAnim.headerMotion (gameObject.transform.position.x, gameObject.name);
 			}
-		} else 
-		if (!Params.isChoosen && isActive)
-			shake = true;
+		} else
+            if (!Params.isChoosen && isActive)
+            {
+                shake = true;
+                if (Params.RecycleScore >0)
+                    Params.RecycleScore -= 60;
+                /// qulis dakargva
+            }
+			
 	}
 
 	public void getSubjectSpriteItem()

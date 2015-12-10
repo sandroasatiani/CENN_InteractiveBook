@@ -5,8 +5,9 @@ public class GlobalParams : MonoBehaviour {
 
     public static bool IsPaused = true;
     public static int currentlevelScore=0;
+    public static int currentRecycleScore = 0;
 
-    public void SavePassedLevels(int level)
+    public static  void SavePassedLevels(int level)
     {
         if (level > PassedLevels())
             PlayerPrefs.SetInt("Passed_Levels", level);
@@ -25,6 +26,7 @@ public class GlobalParams : MonoBehaviour {
     {
         return PlayerPrefs.GetInt("Score");
     }
+
     
 
 }
