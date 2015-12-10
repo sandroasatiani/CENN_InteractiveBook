@@ -11,7 +11,9 @@ public class ItemGarbage : MonoBehaviour {
     Animator animator;
     GameObject currentBin;
     GameObject binGO;
-
+    string selectedType;
+    GameObject currentTxt;
+   
 
     void Start()
     {
@@ -21,7 +23,35 @@ public class ItemGarbage : MonoBehaviour {
     void OnMouseDown()
     {
         startingPos = gameObject.transform.position;
+
+        if (CurrentLevelController.LevelN == 1)
+            ShowUpText();
+        
        
+    }
+
+    void ShowUpText()
+    {
+        
+        switch (gameObject.tag)
+        {
+            case "Metalic_Garbage":
+                currentTxt = TypeController.Metalic_Txt;
+                break;
+            case "Plastic_Garbage":
+                currentTxt = TypeController.Plastic_Txt;
+                break;
+            case "Paper_Garbage":
+                currentTxt = TypeController.Paper_Txt;
+                break;
+            case "Organic_Garbage":
+                currentTxt = TypeController.Organic_Txt;
+                break;
+            default:
+                currentTxt = TypeController.Paper_Txt;
+                break;
+        }
+        currentTxt = Instantiate(currentTxt, transform.position + new Vector3(0, 2, 0), Quaternion.identity) as GameObject;
     }
 
     void OnMouseDrag()
@@ -30,10 +60,14 @@ public class ItemGarbage : MonoBehaviour {
         if (GlobalParams.IsPaused) return;
         point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(point.x, point.y, transform.position.z);
+        if (CurrentLevelController.LevelN == 1)
+            currentTxt.transform.position = transform.position + new Vector3(0,2,0);
     }
 
     void OnMouseUp()
     {
+        if (CurrentLevelController.LevelN==1)
+             Destroy(currentTxt);
         //print("drag is over");
         if(canBeDropped)
         {

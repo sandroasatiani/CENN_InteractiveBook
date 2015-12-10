@@ -7,6 +7,7 @@ public class TimerLogic : MonoBehaviour {
     float angle;
     bool levelIsFinished = false;
     public GameObject TimerArrow;
+    
 	void Start () {
         angle = Timer;
 	}
@@ -23,10 +24,7 @@ public class TimerLogic : MonoBehaviour {
                 Timer -= Time.deltaTime;
                 TimerArrow.transform.Rotate(0, 0, (-360 / angle) * Time.deltaTime);
             }
-            else
-            {
-                print("TimesUp!!");
-            }
+
                
         }
         else
@@ -35,6 +33,8 @@ public class TimerLogic : MonoBehaviour {
             print("Score: " + Timer);
             SettingsBtnsController.ShowScorePanel();
             levelIsFinished = true;
+            GlobalParams.SaveScore((int)Timer);
+            GlobalParams.currentlevelScore = (int)Timer;
 
         }
 	

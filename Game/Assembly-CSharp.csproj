@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scr\CurrentLevelController.cs" />
+     <Compile Include="Assets\Scr\CurrentLevelScore.cs" />
      <Compile Include="Assets\Scr\GarbageAmountText.cs" />
      <Compile Include="Assets\Scr\GarbagePosController.cs" />
      <Compile Include="Assets\Scr\GlobalParams.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scr\recycle\boxGenerator.cs" />
      <Compile Include="Assets\Scr\recycle\itemBox.cs" />
      <Compile Include="Assets\Scr\textiskodi.cs" />
+     <Compile Include="Assets\TypeController.cs" />
      <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
      <Compile Include="Assets\xARM\Components\xARMDelegatesExample.cs" />
      <Compile Include="Assets\xARM\Components\xARMProxy.cs" />

@@ -12,6 +12,7 @@ public class CurrentLevelController : MonoBehaviour {
     public static int GarbageDropped = 0;
     public static int LevelN;
 	void Start () {
+        GlobalParams.currentlevelScore = 0;
         //Reseting Static For Reload
         GarbageDropped = 0;
         GarbageAmount = 0;
