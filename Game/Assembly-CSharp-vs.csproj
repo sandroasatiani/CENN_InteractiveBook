@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -47,6 +47,38 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ContinueBtn.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\AEAnimationExampleController.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\AEMenu.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Core\AEDataParcer.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Core\AEResourceManager.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Core\AETween.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Core\AfterEffectAnimation.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Core\AfterrEffectCash.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Data\AEAnimationData.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Data\AELayerBlendingType.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Data\AEPropertyType.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Data\AESettingsMode.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Data\AEShaders.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Enums\AELayerType.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Models\AEComposition.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Models\AEFootage.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Models\AESprite.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Models\AESpriteRenderer.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Templates\AECompositionTemplate.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Templates\AEFrameTemplate.cs" />
+     <Compile Include="Assets\Extensions\AfterEffect\Scripts\Templates\AELayerTemplate.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Events\Core\Events\EventDispatcher.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Events\Core\Events\EventDispatcherBase.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Events\Data\BaseEvent.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Events\Templates\CEvent.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Events\interfaces\IDispatcher.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Example\Scripts\Button.cs" />
+     <Compile Include="Assets\Extensions\FlashLikeEvents\Example\Scripts\ExampleListner.cs" />
+     <Compile Include="Assets\Extensions\iTween\Plugins\iTween.cs" />
+     <Compile Include="Assets\Extensions\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\Extensions\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\Extensions\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\Scr\CurrentLevelController.cs" />
      <Compile Include="Assets\Scr\CurrentLevelScore.cs" />
      <Compile Include="Assets\Scr\GarbageAmountText.cs" />
@@ -79,6 +111,15 @@
      <Compile Include="Assets\xARM\Windows\xARMOptionsWindow.cs" />
      <Compile Include="Assets\xARM\Windows\xARMPreviewWindow.cs" />
      <None Include="Assets\xARM\_Changelog.txt" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\TestAnimation.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\FireSphere.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\PrecomposeTestScene.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\Boxes.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\Movie_1.xml" />
+     <None Include="Assets\Extensions\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\FogSphere.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\Movie_2.xml" />
+     <None Include="Assets\Extensions\AfterEffect\Example\AnimData\BouncingSphere.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
