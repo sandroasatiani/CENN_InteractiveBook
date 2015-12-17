@@ -11,7 +11,25 @@ public class CurrentLevelController : MonoBehaviour {
     public static int GarbageAmount = 0;
     public static int GarbageDropped = 0;
     public static int LevelN;
+
+    public GameObject Plastic_Bin;
+    public GameObject Metalic_Bin;
+    public GameObject Paper_Bin;
+    public GameObject Organic_Bin;
+
+    public GameObject GarbageNameText;
+
+    public static CurrentLevelController instance;
+
+
 	void Start () {
+
+        if (instance == null)
+            instance = this;
+        else if (instance != null)
+            Destroy(this);
+
+
         GlobalParams.currentlevelScore = 0;
         //Reseting Static For Reload
         GarbageDropped = 0;
@@ -33,9 +51,8 @@ public class CurrentLevelController : MonoBehaviour {
         {
             Instantiate(AllGarbage.transform.GetChild(randomNumList[i]), GarbagePositions.transform.GetChild(i).transform.position, Quaternion.identity);
         }
-
-
 	}
+
 	
 	
 }

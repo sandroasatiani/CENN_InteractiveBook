@@ -3709,9 +3709,9 @@
   <PreviewOneToOnePhysical>false</PreviewOneToOnePhysical>
   <PreviewUpdateIntervalLimitEdit>12</PreviewUpdateIntervalLimitEdit>
   <PreviewUpdateIntervalLimitPlay>24</PreviewUpdateIntervalLimitPlay>
-  <GalleryAutoUpdateInEditorMode>true</GalleryAutoUpdateInEditorMode>
+  <GalleryAutoUpdateInEditorMode>false</GalleryAutoUpdateInEditorMode>
   <GalleryAutoUpdateInPauseMode>false</GalleryAutoUpdateInPauseMode>
-  <GalleryScreenCapsPerRow>3</GalleryScreenCapsPerRow>
+  <GalleryScreenCapsPerRow>4</GalleryScreenCapsPerRow>
   <GalleryUpdateIntervalLimitEdit>12</GalleryUpdateIntervalLimitEdit>
   <GameViewPosition>
     <x>342</x>

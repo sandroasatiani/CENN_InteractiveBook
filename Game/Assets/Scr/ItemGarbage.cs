@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class ItemGarbage : MonoBehaviour {
 
+    public string GeorgianName;
     public float ReturnToStartPosTime = 2;
     Vector3 point;
     bool canBeDropped = false;
@@ -12,8 +13,11 @@ public class ItemGarbage : MonoBehaviour {
     GameObject currentBin;
     GameObject binGO;
     string selectedType;
+    GameObject GarbageNameTxt;
     GameObject currentTxt;
-   
+    GameObject EnlargedBin;
+    Color currentTextColor;
+    float garbageBoundY;
 
     void Start()
     {
@@ -37,21 +41,40 @@ public class ItemGarbage : MonoBehaviour {
         {
             case "Metalic_Garbage":
                 currentTxt = TypeController.Metalic_Txt;
+                EnlargedBin = CurrentLevelController.instance.Metalic_Bin;
+                currentTextColor = Color.blue;
                 break;
             case "Plastic_Garbage":
                 currentTxt = TypeController.Plastic_Txt;
+                EnlargedBin = CurrentLevelController.instance.Plastic_Bin;
+                currentTextColor = Color.red;
                 break;
             case "Paper_Garbage":
                 currentTxt = TypeController.Paper_Txt;
+                EnlargedBin = CurrentLevelController.instance.Paper_Bin;
+                currentTextColor = Color.yellow;
                 break;
             case "Organic_Garbage":
                 currentTxt = TypeController.Organic_Txt;
+                EnlargedBin = CurrentLevelController.instance.Organic_Bin;
+                currentTextColor = Color.green;
                 break;
             default:
                 currentTxt = TypeController.Paper_Txt;
                 break;
         }
-        currentTxt = Instantiate(currentTxt, transform.position + new Vector3(0, 2, 0), Quaternion.identity) as GameObject;
+        
+        if (EnlargedBin !=null)
+        {
+            EnlargedBin.GetComponent<Animator>().SetTrigger("Enlarge");
+            currentTxt = Instantiate(currentTxt, EnlargedBin.transform.position + new Vector3(0, -3, 0), Quaternion.identity) as GameObject;
+        }
+        print(gameObject.GetComponent<SpriteRenderer>().bounds.size.y);
+        garbageBoundY = gameObject.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        GarbageNameTxt = Instantiate(CurrentLevelController.instance.GarbageNameText, transform.position + new Vector3(0, 1 + garbageBoundY, 0), Quaternion.identity) as GameObject;
+        GarbageNameTxt.GetComponent<TextMesh>().text = GeorgianName;
+        GarbageNameTxt.GetComponent<TextMesh>().color = currentTextColor;
+
     }
 
     void OnMouseDrag()
@@ -61,13 +84,22 @@ public class ItemGarbage : MonoBehaviour {
         point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(point.x, point.y, transform.position.z);
         if (CurrentLevelController.LevelN == 1)
-            currentTxt.transform.position = transform.position + new Vector3(0,2,0);
+            GarbageNameTxt.transform.position = transform.position + new Vector3(0, 1 + garbageBoundY, 0);
     }
 
     void OnMouseUp()
     {
-        if (CurrentLevelController.LevelN==1)
-             Destroy(currentTxt);
+        if (CurrentLevelController.LevelN == 1)
+        {
+            Destroy(currentTxt);
+            Destroy(GarbageNameTxt);
+
+            if (EnlargedBin != null)
+            {
+                EnlargedBin.GetComponent<Animator>().SetTrigger("Shrink");
+            }
+        }
+             
         //print("drag is over");
         if(canBeDropped)
         {
