@@ -42,22 +42,22 @@ public class ItemGarbage : MonoBehaviour {
             case "Metalic_Garbage":
                 currentTxt = TypeController.Metalic_Txt;
                 EnlargedBin = CurrentLevelController.instance.Metalic_Bin;
-                currentTextColor = Color.blue;
+                currentTextColor = new Color32(0,82,129,255);
                 break;
             case "Plastic_Garbage":
                 currentTxt = TypeController.Plastic_Txt;
                 EnlargedBin = CurrentLevelController.instance.Plastic_Bin;
-                currentTextColor = Color.red;
+                currentTextColor = new Color32(204, 34, 34, 255);
                 break;
             case "Paper_Garbage":
                 currentTxt = TypeController.Paper_Txt;
                 EnlargedBin = CurrentLevelController.instance.Paper_Bin;
-                currentTextColor = Color.yellow;
+                currentTextColor = new Color32(255, 187, 51, 255);
                 break;
             case "Organic_Garbage":
                 currentTxt = TypeController.Organic_Txt;
                 EnlargedBin = CurrentLevelController.instance.Organic_Bin;
-                currentTextColor = Color.green;
+                currentTextColor = new Color32(0, 153, 68, 255);
                 break;
             default:
                 currentTxt = TypeController.Paper_Txt;
