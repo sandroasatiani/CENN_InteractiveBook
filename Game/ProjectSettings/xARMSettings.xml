@@ -3710,8 +3710,8 @@
   <PreviewUpdateIntervalLimitEdit>12</PreviewUpdateIntervalLimitEdit>
   <PreviewUpdateIntervalLimitPlay>24</PreviewUpdateIntervalLimitPlay>
   <GalleryAutoUpdateInEditorMode>false</GalleryAutoUpdateInEditorMode>
-  <GalleryAutoUpdateInPauseMode>false</GalleryAutoUpdateInPauseMode>
-  <GalleryScreenCapsPerRow>4</GalleryScreenCapsPerRow>
+  <GalleryAutoUpdateInPauseMode>true</GalleryAutoUpdateInPauseMode>
+  <GalleryScreenCapsPerRow>3</GalleryScreenCapsPerRow>
   <GalleryUpdateIntervalLimitEdit>12</GalleryUpdateIntervalLimitEdit>
   <GameViewPosition>
     <x>342</x>
