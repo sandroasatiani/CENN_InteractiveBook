@@ -103,6 +103,7 @@
      <Compile Include="Assets\Scr\recycle\hide.cs" />
      <Compile Include="Assets\Scr\recycle\itemBox.cs" />
      <Compile Include="Assets\Scr\recycle\textiskodi.cs" />
+     <Compile Include="Assets\StartSceneScore.cs" />
      <Compile Include="Assets\Start_BtnController.cs" />
      <Compile Include="Assets\Testing.cs" />
      <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
