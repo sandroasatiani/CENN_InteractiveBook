@@ -7,13 +7,15 @@ public class LevelSelectorController : MonoBehaviour {
     
 	public void LoadLevel(int levelN)
     {
-        Application.LoadLevel("Level_Scene_" + levelN.ToString());
+        if (levelN <= GlobalParams.PassedLevels() + 1)
+            Application.LoadLevel("Level_Scene_" + levelN.ToString());
     }
 
     public void Start()
     {
-        for (int i = 0; i < GlobalParams.PassedLevels(); i++)
+        for (int i = 0; i < GlobalParams.PassedLevels()+1; i++)
         {
+            if (Levels.transform.childCount < GlobalParams.PassedLevels() + 1) return;
             Levels.transform.GetChild(i).gameObject.transform.FindChild("Cover").gameObject.SetActive(false);
         }
     }

@@ -10,5 +10,7 @@ public class ContinueBtn : MonoBehaviour {
            Application.LoadLevel("Level_Scene_" + (CurrentLevelController.LevelN + 1).ToString());
            GlobalParams.SavePassedLevels(CurrentLevelController.LevelN);
        }
+       if (CurrentLevelController.LevelN >= 5)
+           Application.LoadLevel("FinishScene");
     }
 }

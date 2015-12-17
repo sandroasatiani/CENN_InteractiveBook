@@ -17,8 +17,10 @@ public class MechanismAnim : MonoBehaviour {
 	public GameObject kbil_4;
 	public GameObject sensor;
 	public GameObject reference_text;
+    public GameObject reference_StartText;
 	public GameObject reference_Product;
 	public GameObject reference_Sprite;
+    public GameObject reference_Box;
 	Vector3 headerPosition;
 	static bool go = false;
 	bool back = false;
@@ -39,7 +41,8 @@ public class MechanismAnim : MonoBehaviour {
 	List<GameObject> ProductList;
 	List<Sprite> productSprite;
 	List<string> productName;
-	 static List<string> productTagName;
+    List<string> productType;
+	static List<string> productTagName;
 	float productY;
     public int Score = 180;
 
@@ -47,12 +50,14 @@ public class MechanismAnim : MonoBehaviour {
 
 	void Start ()
 	{
+        Score = 180;
 		headerPosition = header.transform.position;
 		startX = headerPosition.x;
 		rotVibZ = 2.0f;
 		rotSnakeZ = -1.5f;
 		ProductList = new List<GameObject>();
 		productSprite = new List<Sprite>();
+        productType = new List<string>();
 		productName = new List<string>();
 		productTagName = new List<string>();
 		addProductsInList ();
@@ -64,14 +69,29 @@ public class MechanismAnim : MonoBehaviour {
 	{
 		rand = Random.Range (0, productSprite.Count);
 
+        if (productTagName[rand] == "m")
+            reference_Box.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("yutebi/Am_2");
+        else if (productTagName[rand] == "p")
+            reference_Box.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("yutebi/Ap_4");
+        else if (productTagName[rand] == "q")
+            reference_Box.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("yutebi/Bq_9");
+        else
+            reference_Box.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("yutebi/Co_11");
+
+
 		reference_Product.GetComponent<SpriteRenderer>().sprite = productSprite [rand];
-		reference_text.GetComponent<TextMesh> ().text = "გააკეთე " + productName[rand];
+        reference_StartText.GetComponent<TextMesh>().text = "გადაამუშავე " + productType[rand] + " ნარჩენები";
+        if (productName[rand] != "კომპოსტი")
+            reference_text.GetComponent<TextMesh>().text = "და დაამზადე " + productType[rand] + " " + productName[rand];
+        else
+            reference_text.GetComponent<TextMesh>().text = "და დაამზადე " +  productName[rand];
 	}
-	void addDataInList(Sprite _sprite, string _productName, string _productTagName)
+    void addDataInList(string _productType, Sprite _sprite, string _productName, string _productTagName)
 	{
 		productSprite.Add (_sprite);
 		productName.Add(_productName);
 		productTagName.Add(_productTagName);
+        productType.Add(_productType);
 	}
 	public static string returnTagReference()
 	{
@@ -89,31 +109,34 @@ public class MechanismAnim : MonoBehaviour {
 	void addProductsInList()
 	{
 		//metalic
-		addDataInList (Resources.Load<Sprite> ("products/metalic/chanchiki"),"მეტალის  \n ჭანჭიკი","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/konservis qila"),"მეტალის  \n ქილა","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/metalis dana"),"მეტალის  \n დანა","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/metalis tefshi"),"მეტალის  \n თეფში","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/metalis chaidani"),"მეტალის  \n ჩაიდანი","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/metalis kovzi"),"მეტალის  \n კოვზი ","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/metalis chiqa"),"მეტალის  \n ჭიქა","m");
-		addDataInList (Resources.Load<Sprite> ("products/metalic/shurupi"),"მეტალის  \n შურუპი","m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/chanchiki"),"ბოლტი","m");
+        addDataInList("მეტალის", Resources.Load<Sprite>("products/metalic/konservis qila"), "\n კონსერვის ქილა", "m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/metalis dana"),"დანა","m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/metalis tefshi"),"თეფში","m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/metalis chaidani"),"ჩაიდანი","m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/metalis kovzi"),"კოვზი ","m");
+		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/metalis chiqa"),  " ჭიქა","m");
+	addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/shurupi"),"ვინტი","m");
 
 		//paper
-		addDataInList (Resources.Load<Sprite> ("products/Paper/qagaldis chanta"),"ქაღალდის  \n ჩანთა","q");
-		addDataInList (Resources.Load<Sprite> ("products/Paper/qagaldis ruloni"),"ქაღალდის  \n რულონი","q");
-		addDataInList (Resources.Load<Sprite> ("products/Paper/wigni"),"წიგნი","q");
-		addDataInList (Resources.Load<Sprite> ("products/Paper/yuti"),"ქაღალდის  \n ყუთი","q");
+		addDataInList ("ქაღალდის",Resources.Load<Sprite> ("products/Paper/qagaldis chanta"),"ჩანთა","q");
+		addDataInList ("ქაღალდის", Resources.Load<Sprite> ("products/Paper/qagaldis ruloni"),"რულონი","q");
+		addDataInList ("ქაღალდის", Resources.Load<Sprite> ("products/Paper/wigni"),"რვეული","q");
+		addDataInList ("ქაღალდის", Resources.Load<Sprite> ("products/Paper/yuti"),  "ყუთი","q");
 
 		//plastic
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/bottle"),"პლასტმასის  \n ბოთლი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/mirrorCleaner"),"მინის  \n საწმენდის ბოთლი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis chagali da kovzi"),"პლასტმასის  \n ჩანგალი და კოვზი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis chiqa"),"პლასტმასის  \n ჭიქა","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis jami"),"პლასტმასის  \n ჯამი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis lego"),"პლასტმასის  \n ლეგო","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis sakidi"),"ტანსაცმლის  \n საკიდი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plastmasis txevadi sapnis botli"),"თხევადი  \n საპნის ბოთლი","p");
-		addDataInList (Resources.Load<Sprite> ("products/Plastic/plate"),"პლასტმასის  \n თეფში","p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/bottle"), "ბოთლი", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/mirrorCleaner"), "მინის \n საწმენდის ჭურჭელი", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis chagali da kovzi"), "\n ჩანგალი და კოვზი", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis chiqa"), "ჭიქა", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis jami"), "ჯამი", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis lego"), "ლეგო", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis sakidi"), "\n ტასაცმლის საკიდი", "p");
+     addDataInList("პლასტმასის", Resources.Load<Sprite>("products/Plastic/plastmasis txevadi sapnis botli"), "\n საპნის ჭურჭელი", "p");
+	 addDataInList ("პლასტმასის", Resources.Load<Sprite> ("products/Plastic/plate")," თეფში","p");
+
+        //organic
+       addDataInList("ორგანული",Resources.Load<Sprite>("products/organic/kom"), "კომპოსტი", "o");
 
 	}
 	IEnumerator changeScreen() {
