@@ -13,6 +13,7 @@ public class LevelSelectorController : MonoBehaviour {
 
     public void Start()
     {
+        GlobalParams.CurrentLevel = 0;
         for (int i = 0; i < GlobalParams.PassedLevels()+1; i++)
         {
             if (Levels.transform.childCount < GlobalParams.PassedLevels() + 1) return;
@@ -22,5 +23,10 @@ public class LevelSelectorController : MonoBehaviour {
     public void GoToHome()
     {
         Application.LoadLevel("StartScene");
+    }
+
+    public void LoadKichenMovie()
+    {
+        Application.LoadLevel("Movie_Kichen");
     }
 }
