@@ -91,7 +91,8 @@ public class ItemGarbage : MonoBehaviour {
     {
         if (CurrentLevelController.LevelN == 1)
         {
-            Destroy(currentTxt);
+            if (currentTxt.activeInHierarchy)
+                    Destroy(currentTxt);
             Destroy(GarbageNameTxt);
 
             if (EnlargedBin != null)
@@ -104,6 +105,7 @@ public class ItemGarbage : MonoBehaviour {
         if(canBeDropped)
         {
             DropInBin(gameObject.tag);
+            currentBin.GetComponent<AudioSource>().Play();
         }
         else
         {

@@ -29,7 +29,6 @@ public class CurrentLevelController : MonoBehaviour {
         else if (instance != null)
             Destroy(this);
 
-
         GlobalParams.currentlevelScore = 0;
         //Reseting Static For Reload
         GarbageDropped = 0;
@@ -40,6 +39,7 @@ public class CurrentLevelController : MonoBehaviour {
 
         string LevelNum = Application.loadedLevelName.Remove(0,12);
         LevelN = int.Parse(LevelNum);
+        GlobalParams.CurrentLevel = LevelN;
 
         List<int> randomNumList = Enumerable.Range(0, AllGarbage.transform.childCount).ToList();
         randomNumList.Shuffle();

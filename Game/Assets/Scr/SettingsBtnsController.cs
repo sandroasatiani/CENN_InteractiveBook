@@ -89,4 +89,9 @@ public class SettingsBtnsController : MonoBehaviour {
             ScorePanel_static.SetActive(true);
     }
 
+    public void ShowMovieToFactory()
+    {
+        Application.LoadLevel("Movie_ToFactory");
+    }
+
 }

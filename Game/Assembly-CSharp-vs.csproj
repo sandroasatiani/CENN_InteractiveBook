@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ContinueBtn.cs" />
      <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\AEAnimationExampleController.cs" />
      <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\AEMenu.cs" />
      <Compile Include="Assets\Extensions\AfterEffect\Example\Scripts\Spawner.cs" />
@@ -79,10 +78,10 @@
      <Compile Include="Assets\Extensions\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\Extensions\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\Extensions\iTween\Sample\SampleInfo.cs" />
-     <Compile Include="Assets\FinishScreenScoreTxt.cs" />
-     <Compile Include="Assets\MovieController.cs" />
+     <Compile Include="Assets\Scr\ContinueBtn.cs" />
      <Compile Include="Assets\Scr\CurrentLevelController.cs" />
      <Compile Include="Assets\Scr\CurrentLevelScore.cs" />
+     <Compile Include="Assets\Scr\FinishScreenScoreTxt.cs" />
      <Compile Include="Assets\Scr\GarbageAmountText.cs" />
      <Compile Include="Assets\Scr\GarbagePosController.cs" />
      <Compile Include="Assets\Scr\GlobalParams.cs" />
@@ -90,7 +89,11 @@
      <Compile Include="Assets\Scr\ItemGarbage.cs" />
      <Compile Include="Assets\Scr\LevelController.cs" />
      <Compile Include="Assets\Scr\LevelSelectorController.cs" />
+     <Compile Include="Assets\Scr\MovieController.cs" />
      <Compile Include="Assets\Scr\SettingsBtnsController.cs" />
+     <Compile Include="Assets\Scr\SkipController.cs" />
+     <Compile Include="Assets\Scr\StartSceneScore.cs" />
+     <Compile Include="Assets\Scr\Start_BtnController.cs" />
      <Compile Include="Assets\Scr\Start_Controller.cs" />
      <Compile Include="Assets\Scr\TimerLogic.cs" />
      <Compile Include="Assets\Scr\TypeController.cs" />
@@ -103,9 +106,6 @@
      <Compile Include="Assets\Scr\recycle\hide.cs" />
      <Compile Include="Assets\Scr\recycle\itemBox.cs" />
      <Compile Include="Assets\Scr\recycle\textiskodi.cs" />
-     <Compile Include="Assets\StartSceneScore.cs" />
-     <Compile Include="Assets\Start_BtnController.cs" />
-     <Compile Include="Assets\Testing.cs" />
      <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
      <Compile Include="Assets\xARM\Components\xARMDelegatesExample.cs" />
      <Compile Include="Assets\xARM\Components\xARMProxy.cs" />

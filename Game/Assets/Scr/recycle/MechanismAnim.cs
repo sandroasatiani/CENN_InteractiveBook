@@ -50,7 +50,6 @@ public class MechanismAnim : MonoBehaviour {
 
 	void Start ()
 	{
-        Score = 180;
 		headerPosition = header.transform.position;
 		startX = headerPosition.x;
 		rotVibZ = 2.0f;
@@ -63,6 +62,8 @@ public class MechanismAnim : MonoBehaviour {
 		addProductsInList ();
 		showReference();
 		productY = GameObject.Find ("roller").transform.position.y * 0.8f;
+        Params.RecycleScore = Score;
+
 
 	}
 	void generateReference()

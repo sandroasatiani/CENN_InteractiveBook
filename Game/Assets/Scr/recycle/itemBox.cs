@@ -16,6 +16,7 @@ public class itemBox : MonoBehaviour {
 
 	void Start ()
 	{
+
 		objectName = gameObject.name;
 		isActive = true;
 		spRend = gameObject.GetComponent<SpriteRenderer> ();
