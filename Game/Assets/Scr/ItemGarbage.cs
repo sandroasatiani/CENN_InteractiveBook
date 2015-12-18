@@ -19,6 +19,8 @@ public class ItemGarbage : MonoBehaviour {
     Color currentTextColor;
     float garbageBoundY;
 
+    
+
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -30,7 +32,8 @@ public class ItemGarbage : MonoBehaviour {
 
         if (CurrentLevelController.LevelN == 1)
             ShowUpText();
-        
+        if (gameObject.GetComponent<AudioSource>())
+            gameObject.GetComponent<AudioSource>().Play();
        
     }
 
@@ -67,7 +70,8 @@ public class ItemGarbage : MonoBehaviour {
         if (EnlargedBin !=null)
         {
             EnlargedBin.GetComponent<Animator>().SetTrigger("Enlarge");
-            currentTxt = Instantiate(currentTxt, EnlargedBin.transform.position + new Vector3(0, -3, 0), Quaternion.identity) as GameObject;
+            currentTxt = Instantiate(currentTxt, EnlargedBin.transform.position + new Vector3(0, -3, 5), Quaternion.identity) as GameObject;
+            //currentTxt.GetComponent<Renderer>().sortingLayerName= "Garbage_Text";
         }
         print(gameObject.GetComponent<SpriteRenderer>().bounds.size.y);
         garbageBoundY = gameObject.GetComponent<SpriteRenderer>().bounds.size.y / 2;
@@ -84,7 +88,7 @@ public class ItemGarbage : MonoBehaviour {
         point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(point.x, point.y, transform.position.z);
         if (CurrentLevelController.LevelN == 1)
-            GarbageNameTxt.transform.position = transform.position + new Vector3(0, 1 + garbageBoundY, 0);
+            GarbageNameTxt.transform.position = transform.position + new Vector3(0, 1 + garbageBoundY, 5);
     }
 
     void OnMouseUp()

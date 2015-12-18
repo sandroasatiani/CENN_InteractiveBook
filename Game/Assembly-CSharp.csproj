@@ -85,7 +85,6 @@
      <Compile Include="Assets\Scr\GarbageAmountText.cs" />
      <Compile Include="Assets\Scr\GarbagePosController.cs" />
      <Compile Include="Assets\Scr\GlobalParams.cs" />
-     <Compile Include="Assets\Scr\ItemBin.cs" />
      <Compile Include="Assets\Scr\ItemGarbage.cs" />
      <Compile Include="Assets\Scr\LevelController.cs" />
      <Compile Include="Assets\Scr\LevelSelectorController.cs" />
