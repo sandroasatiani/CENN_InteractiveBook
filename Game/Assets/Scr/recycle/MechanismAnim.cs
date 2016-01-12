@@ -109,6 +109,7 @@ public class MechanismAnim : MonoBehaviour {
 
 	void addProductsInList()
 	{
+       
 		//metalic
 		addDataInList ("მეტალის", Resources.Load<Sprite> ("products/metalic/chanchiki"),"ბოლტი","m");
         addDataInList("მეტალის", Resources.Load<Sprite>("products/metalic/konservis qila"), "\n კონსერვის ქილა", "m");
