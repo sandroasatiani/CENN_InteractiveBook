@@ -78,6 +78,7 @@
      <Compile Include="Assets\Extensions\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\Extensions\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\Extensions\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\GarbageNameText.cs" />
      <Compile Include="Assets\Scr\ContinueBtn.cs" />
      <Compile Include="Assets\Scr\CurrentLevelController.cs" />
      <Compile Include="Assets\Scr\CurrentLevelScore.cs" />
