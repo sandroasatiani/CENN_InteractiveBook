@@ -94,4 +94,9 @@ public class SettingsBtnsController : MonoBehaviour {
         Application.LoadLevel("Movie_ToFactory");
     }
 
+    public void GoToFinishScreen()
+    {
+        Application.LoadLevel("FinishScene");
+    }
+
 }
