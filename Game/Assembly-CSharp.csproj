@@ -106,6 +106,7 @@
      <Compile Include="Assets\Scr\recycle\hide.cs" />
      <Compile Include="Assets\Scr\recycle\itemBox.cs" />
      <Compile Include="Assets\Scr\recycle\textiskodi.cs" />
+     <Compile Include="Assets\TextOutline.cs" />
      <Compile Include="Assets\xARM\Classes\xARMClasses.cs" />
      <Compile Include="Assets\xARM\Components\xARMDelegatesExample.cs" />
      <Compile Include="Assets\xARM\Components\xARMProxy.cs" />
