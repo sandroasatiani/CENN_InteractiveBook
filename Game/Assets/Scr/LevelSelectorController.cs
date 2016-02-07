@@ -29,4 +29,12 @@ public class LevelSelectorController : MonoBehaviour {
     {
         Application.LoadLevel("Movie_Kichen");
     }
+
+    void Update ()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("StartScene");
+        }
+    }
 }

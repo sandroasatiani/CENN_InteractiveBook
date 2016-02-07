@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Animations\factoryAnim\cloudScript.cs" />
      <Compile Include="Assets\Animations\factoryAnim\factory.cs" />
+     <Compile Include="Assets\CantTap.cs" />
      <Compile Include="Assets\GarbageNameText.cs" />
      <Compile Include="Assets\Scr\ContinueBtn.cs" />
      <Compile Include="Assets\Scr\CurrentLevelController.cs" />

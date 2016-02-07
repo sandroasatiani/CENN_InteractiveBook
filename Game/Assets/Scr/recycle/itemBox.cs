@@ -25,6 +25,8 @@ public class itemBox : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+        if (GlobalParams.SettingsIsOpened && (gameObject.name=="box_5" || gameObject.name=="box_6"))
+            return;
 		if (gameObject.tag == MechanismAnim.returnTagReference ()) {
 			if (!Params.isChoosen && isActive) {
 				isActive = false;

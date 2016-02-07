@@ -7,6 +7,7 @@ public class GlobalParams : MonoBehaviour {
     public static int currentlevelScore=0;
     public static int currentRecycleScore = 0;
     public static int CurrentLevel;
+    public static bool SettingsIsOpened = false;
 
     public static  void SavePassedLevels(int level)
     {

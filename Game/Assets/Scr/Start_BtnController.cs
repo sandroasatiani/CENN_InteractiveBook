@@ -8,7 +8,6 @@ public class Start_BtnController : MonoBehaviour {
 
     void Start()
     {
-        print("Shemovdivar");
 
         if (AudioListener.volume == 1)
         {
@@ -30,6 +29,7 @@ public class Start_BtnController : MonoBehaviour {
     public void ToggleSettingExpended()
     {
         SettingExpended.SetActive(!SettingExpended.activeInHierarchy);
+        GlobalParams.SettingsIsOpened = !GlobalParams.SettingsIsOpened;
     }
 
     public void ToggleMusic()

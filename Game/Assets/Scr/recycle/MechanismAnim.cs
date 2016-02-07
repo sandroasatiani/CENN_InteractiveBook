@@ -50,6 +50,7 @@ public class MechanismAnim : MonoBehaviour {
 
 	void Start ()
 	{
+        GlobalParams.SettingsIsOpened = false;
 		headerPosition = header.transform.position;
 		startX = headerPosition.x;
 		rotVibZ = 2.0f;

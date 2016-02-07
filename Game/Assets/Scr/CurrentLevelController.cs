@@ -53,6 +53,14 @@ public class CurrentLevelController : MonoBehaviour {
         }
 	}
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("StartScene");
+        }
+    }
+
 	
 	
 }
