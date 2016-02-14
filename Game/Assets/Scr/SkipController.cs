@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SkipController : MonoBehaviour {
 
+    public GameObject LoadingScreen;
 	public void LoadNextLevel()
     {
         if (GlobalParams.CurrentLevel <5)
@@ -14,5 +15,16 @@ public class SkipController : MonoBehaviour {
     public void LoadRecycle()
     {
         Application.LoadLevel("Recycle");
+    }
+
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadingScreen.SetActive(true);
+            Application.LoadLevel("StartScene");
+        }
     }
 }

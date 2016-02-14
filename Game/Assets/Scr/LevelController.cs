@@ -27,7 +27,7 @@ public class LevelController : MonoBehaviour {
             LevelControllerPanel.SetActive(false);
 
         BackgroundImage.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("Level_Background/Stage_" + levelNum.ToString());
-        print("Level_Background/Stage_" + levelNum.ToString());
+        //print("Level_Background/Stage_" + levelNum.ToString());
         GameObject currentLevel =  Instantiate(Levels[levelNum - 1], Vector3.zero, Quaternion.identity) as GameObject;
         GameObject LevelGO = currentLevel.transform.Find("Garbage_Positions").gameObject;
         Camera.main.backgroundColor = currentLevel.transform.Find("StageBGColor").gameObject.GetComponent<SpriteRenderer>().color;

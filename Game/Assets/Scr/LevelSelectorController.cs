@@ -4,6 +4,7 @@ using System.Collections;
 public class LevelSelectorController : MonoBehaviour {
 
     public GameObject Levels;
+    public GameObject LoadingScreen;
     
 	public void LoadLevel(int levelN)
     {
@@ -34,7 +35,10 @@ public class LevelSelectorController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            LoadingScreen.SetActive(true);
             Application.LoadLevel("StartScene");
         }
+
+
     }
 }

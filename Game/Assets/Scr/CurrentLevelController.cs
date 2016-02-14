@@ -5,6 +5,7 @@ using System.Linq;
 
 public class CurrentLevelController : MonoBehaviour {
 
+    public GameObject LoadingScreen;
     
     public GameObject AllGarbage;
     public GameObject GarbagePositions;
@@ -57,6 +58,7 @@ public class CurrentLevelController : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            LoadingScreen.SetActive(true);
             Application.LoadLevel("StartScene");
         }
     }

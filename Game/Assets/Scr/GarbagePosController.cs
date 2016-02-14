@@ -16,7 +16,7 @@ public class GarbagePosController : MonoBehaviour {
     {
        for (int i = 0; i < LevelGO.transform.childCount; i++)
        {
-           print(LevelGO.transform.GetChild(i).gameObject.transform.position);
+           //print(LevelGO.transform.GetChild(i).gameObject.transform.position);
            PositionsList.Add(LevelGO.transform.GetChild(i).gameObject.transform.position);
        }
     }
@@ -26,12 +26,6 @@ public class GarbagePosController : MonoBehaviour {
 
         List<int> randomNumList = Enumerable.Range(0, AllGarbage.transform.childCount).ToList();
         randomNumList.Shuffle();    
-        for (int i = 0; i < LevelGO.transform.childCount; i++)
-        {
-            print(randomNumList[i]);
-            
-        }
-
         for (int i = 0; i < LevelGO.transform.childCount; i++)
         {
             Instantiate(AllGarbage.transform.GetChild(randomNumList[i]), PositionsList[i], Quaternion.identity);

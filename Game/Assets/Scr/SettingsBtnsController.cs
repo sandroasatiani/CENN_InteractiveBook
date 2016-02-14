@@ -9,6 +9,7 @@ public class SettingsBtnsController : MonoBehaviour {
     public static  GameObject ScorePanel_static;
     public void Start()
     {
+
         ScorePanel_static = ScorePanel;
     }
 	public void ShowInfo()
@@ -98,5 +99,7 @@ public class SettingsBtnsController : MonoBehaviour {
     {
         Application.LoadLevel("FinishScene");
     }
+
+    
 
 }

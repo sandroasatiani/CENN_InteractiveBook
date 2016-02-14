@@ -8,7 +8,7 @@ public class Params : MonoBehaviour {
     public static int RecycleScore = 180;
 	void Start () {
         RecycleScore = 180;
-        print("Reseted Score: " + RecycleScore);
+        //print("Reseted Score: " + RecycleScore);
 	
 	}
 	

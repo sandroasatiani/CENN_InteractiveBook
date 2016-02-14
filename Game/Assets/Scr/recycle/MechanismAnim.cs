@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class MechanismAnim : MonoBehaviour {
 
+    public GameObject LoadingScreen;
 	public GameObject wheel;
 	public GameObject header;
 	public GameObject snake;
@@ -180,6 +181,12 @@ public class MechanismAnim : MonoBehaviour {
 	}
 	void Update ()
 	{
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadingScreen.SetActive(true);
+            Application.LoadLevel("StartScene");
+        }
 		if (Params.startHeaderMotion){
 			Params.isChoosen = true;
 		}

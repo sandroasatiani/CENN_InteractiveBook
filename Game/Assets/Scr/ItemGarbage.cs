@@ -73,7 +73,6 @@ public class ItemGarbage : MonoBehaviour {
             currentTxt = Instantiate(currentTxt, EnlargedBin.transform.position + new Vector3(0, -3, 5), Quaternion.identity) as GameObject;
             //currentTxt.GetComponent<Renderer>().sortingLayerName= "Garbage_Text";
         }
-        print(gameObject.GetComponent<SpriteRenderer>().bounds.size.y);
         garbageBoundY = gameObject.GetComponent<SpriteRenderer>().bounds.size.y / 2;
         GarbageNameTxt = Instantiate(CurrentLevelController.instance.GarbageNameText, transform.position + new Vector3(0, 1 + garbageBoundY, 0), Quaternion.identity) as GameObject;
         GarbageNameTxt.GetComponent<TextMesh>().text = GeorgianName;

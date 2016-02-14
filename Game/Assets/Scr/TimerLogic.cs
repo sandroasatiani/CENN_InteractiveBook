@@ -29,8 +29,6 @@ public class TimerLogic : MonoBehaviour {
         }
         else
         {
-            print("Finished Level Load REcycle");
-            print("Score: " + Timer);
             SettingsBtnsController.ShowScorePanel();
             levelIsFinished = true;
             GlobalParams.SaveScore((int)Timer);
