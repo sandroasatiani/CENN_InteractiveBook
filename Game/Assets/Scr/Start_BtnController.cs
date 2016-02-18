@@ -50,4 +50,9 @@ public class Start_BtnController : MonoBehaviour {
         }
     }
 
+    public void ExitGame ()
+    {
+        Application.Quit();
+    }
+
 }

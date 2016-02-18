@@ -337,7 +337,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>iPad mini</Name>
@@ -543,7 +543,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>iPad mini</Name>
@@ -815,7 +815,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -930,7 +930,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -1068,7 +1068,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -1205,7 +1205,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Standalone</Name>
@@ -1319,7 +1319,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Standalone</Name>
@@ -1455,7 +1455,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Standalone</Name>
@@ -1816,7 +1816,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -1862,7 +1862,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -2136,7 +2136,7 @@
       <IsLandscape>true</IsLandscape>
       <IsPortrait>false</IsPortrait>
       <IsBaseRes>true</IsBaseRes>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </xARMScreenCap>
     <xARMScreenCap>
       <Name>Android</Name>
@@ -3709,7 +3709,7 @@
   <PreviewOneToOnePhysical>false</PreviewOneToOnePhysical>
   <PreviewUpdateIntervalLimitEdit>12</PreviewUpdateIntervalLimitEdit>
   <PreviewUpdateIntervalLimitPlay>24</PreviewUpdateIntervalLimitPlay>
-  <GalleryAutoUpdateInEditorMode>false</GalleryAutoUpdateInEditorMode>
+  <GalleryAutoUpdateInEditorMode>true</GalleryAutoUpdateInEditorMode>
   <GalleryAutoUpdateInPauseMode>true</GalleryAutoUpdateInPauseMode>
   <GalleryScreenCapsPerRow>3</GalleryScreenCapsPerRow>
   <GalleryUpdateIntervalLimitEdit>12</GalleryUpdateIntervalLimitEdit>
